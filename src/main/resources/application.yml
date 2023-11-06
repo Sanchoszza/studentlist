@@ -1,0 +1,8 @@
+students:
+  create-on-start: true
+
+app:
+  server:
+    port: 8888
+
+
