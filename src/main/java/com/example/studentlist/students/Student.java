@@ -1,4 +1,4 @@
-package com.example.studentlist;
+package com.example.studentlist.students;
 
 import lombok.*;
 

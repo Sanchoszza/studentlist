@@ -1,6 +1,9 @@
-package com.example.studentlist;
+package com.example.studentlist.students;
 
+import com.example.studentlist.event.StudentCreateEvent;
+import com.example.studentlist.event.StudentDeleteEvent;
 import com.example.studentlist.properties.ApplicationProperties;
+import com.example.studentlist.students.Student;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
@@ -42,14 +45,14 @@ public class StudentService {
         student.setAge(age);
         students.add(student);
 
-//        applicationEventPublisher.publishEvent(new StudentCreateEvent(this, student));
+        applicationEventPublisher.publishEvent(new StudentCreateEvent(this, student));
         return student;
     }
 
     public void deleteStudent(UUID id){
         students.removeIf(student -> student.getId().equals(id));
 
-//        applicationEventPublisher.publishEvent(new StudentDeleteEvent(this, id));
+        applicationEventPublisher.publishEvent(new StudentDeleteEvent(this, id));
     }
 
     public void clearStudents(){

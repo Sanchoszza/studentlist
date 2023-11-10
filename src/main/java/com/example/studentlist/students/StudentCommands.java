@@ -1,5 +1,7 @@
-    package com.example.studentlist;
+    package com.example.studentlist.students;
 
+    import com.example.studentlist.students.Student;
+    import com.example.studentlist.students.StudentService;
     import lombok.extern.slf4j.Slf4j;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.shell.standard.ShellComponent;

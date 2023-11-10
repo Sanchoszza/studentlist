@@ -1,6 +1,6 @@
 package com.example.studentlist.event;
 
-import com.example.studentlist.Student;
+import com.example.studentlist.students.Student;
 import org.springframework.context.ApplicationEvent;
 
 public class StudentCreateEvent extends ApplicationEvent {
